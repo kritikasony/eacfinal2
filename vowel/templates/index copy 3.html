@@ -1,0 +1,888 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="" />
+  <meta name="title" content="" />
+  <meta name="description" content="" />
+<title>Vowel</title>
+
+<!-- ////////////////////////////////// -->
+<!-- //      Start Stylesheets       // -->
+<!-- ////////////////////////////////// -->
+<link href="{% static 'vowels/css/style.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'vowels/css/inner.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'vowels/css/slimbox2.css' %}" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+    <script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+	<script>
+	  DD_belatedPNG.fix('#slideshow_container, #content, #header_inner, img, .bg_input');
+	</script>
+	<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<style type="text/css" >
+/*** PORTFOLIO ***/
+.container_pf{float:left; margin-bottom:20px; line-height:20px;}
+.container_pf1{margin-bottom:20px; line-height:20px;}
+.box_pf{
+	width:90px;
+	border: 1px solid #ddd;
+	text-align: center;
+	padding: 6px 6px 0px 6px;
+	margin: 10px 26px 4px 0px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.box_pf_green{
+	background-color: green;
+	width:90px;
+	border: 1px solid #ddd;
+	text-align: center;
+	padding: 6px 6px 0px 6px;
+	margin: 10px 26px 4px 0px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.box_pf_red{
+	background-color: red;
+	width:90px;
+	border: 1px solid #ddd;
+	text-align: center;
+	padding: 6px 6px 0px 6px;
+	margin: 10px 26px 4px 0px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.box_pf.nomargin{margin-right:0px;}
+.box_pf img{
+}
+
+.button {
+  background-color:#A0A0A0; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 25px; 
+  margin-left: 25px;
+}
+
+.button_modal {
+  background-color:rgb(248, 132, 132); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 25px; 
+  margin-top: 25px; 
+  margin-right: 45px;
+  float: right;
+}
+
+
+.mybtn {
+  background-color:lightgrey; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 25px; 
+  margin-left: 55px;
+  width: 25%;
+  height: 50px;
+}
+
+.button:hover{
+	background-color:red;
+}
+
+.button_start:hover{
+	background-color:lightgreen;
+}
+
+.button_set_game:hover{
+	background-color:lightgreen;
+}
+
+.button_start{
+	width: 623px;
+	background-color: seagreen;
+	margin-left: 132px;
+
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-bottom: 25px; 
+	/* margin-left: 25px; */
+}
+
+.button_set_game{
+	width: 330px;
+	background-color: darkgray;
+	margin-left: 400px;
+
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-bottom: 25px; 
+	/* margin-left: 25px; */
+}
+
+.select-css {
+    display: inline;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 50%;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color:rgba(211, 211, 211, 0.959);
+}
+
+.select-css:hover {
+    border-color: #888;
+}
+
+.settings_text {
+	font-family:Serif;
+	color: #242424;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.center {
+  margin-left: 140px;;
+  width: 90%;
+  padding: 10px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:lightgray; /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal1-content {
+  background-color: white;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 45%; /* Could be more or less, depending on screen size */
+  height: 40%;
+  border-radius: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*** END OF PORTFOLIO ***/
+</style>
+
+<!-- ////////////////////////////////// -->
+<!-- //      Javascript Files        // -->
+<!-- ////////////////////////////////// -->
+<script type="text/javascript" src="{% static 'vowels/js/jquery-1.3.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vowels/js/custom.js' %}"></script>
+<script type="text/javascript" src="{% static 'vowels/js/slimbox2.js' %}"></script>
+</head>
+<body>
+	<div id="main_container_inner">
+		<div id="centercolumn">
+		
+		<!-- BEGIN HEADER -->
+			<div id="toparea">
+				<div id="logo">
+					<div id="pad_logo">
+						<!-- <a href="index-2.html"><img src="{% static 'vowels/images/logo.png' %}" alt="" /></a> -->
+					</div>
+				</div><!-- end of logo -->
+				<div id="topmenu">
+					<div id="searchtop">
+						<form method="post" action="#">
+						<p><span class="bg_input"><input type="text" class="inputbox" value="search" onblur="if (this.value == ''){this.value = 'search'; }" onfocus="if (this.value == 'search') {this.value = ''; }"/></span></p>
+						</form>
+					</div><!-- end of searchtop -->
+					<div id="navtop">
+						<ul id="nav">
+						<li><a href="index-2.html">Home</a></li>
+						<!-- <li><a href="about.html">About Us</a> -->
+							<!-- <ul>
+								<li><a href="about.html">Sub menu Level 2a</a></li>
+								<li><a href="about.html">Sub menu Level 2b</a>
+									<ul>
+										<li><a href="about.html">Sub menu Level 3a</a></li>
+										<li><a href="about.html">Sub menu Level 3b</a></li>
+										<li><a href="about.html">Sub menu Level 3c</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">Sub menu Level 2c</a></li>
+							</ul> -->
+						</li>
+						<li class="current_page_item"><a href="portfolio.html">Vowel</a></li>
+						<!-- <li><a href="blog.html">Blog</a></li> -->
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="{% url 'Logout' %}">Logout</a></li>
+						</ul>
+					</div><!-- end of navtop -->
+				</div><!-- end of topmenu -->
+				<div class="clr"></div>
+			</div><!-- end of toparea -->
+			
+			<div id="header_inner">
+				<div id="headertext">
+				<h1>{% if user.is_authenticated %}{{request.user}}{% else %}VOWEL{% endif %}</h1>
+				</div>
+			</div>
+		<!-- END OF HEADER -->
+			
+		<!-- BEGIN CONTENT -->
+			<div id="content">
+			<div id="game_settings">
+				<div id="padding_content">
+					<div id="maincontent">
+						<div id="maintext_portfolio" class="center">
+							<label for="word_count" class="settings_text">Select word count   : </label>
+							<select name="word_count" id="id_wors_count" class="select-css" style="margin-left: 5px;">
+								<option value="20">Short(20)</option>
+								<option value="100">Standard(100)</option>
+								<option value="200">Long(100)</option>
+							</select>
+						</div>
+						<div id="maintext_portfolio" class="center" style="margin-top: 25px;">
+							<label for="word_count" class="settings_text">Choose words : </label>
+							<button id="myBtn" class="mybtn">Choose</button>
+							<div style="clear:both"></div>
+							<div class="clr"></div><!-- clear float -->
+							{% comment %} <p style="text-align:center"><img src="{% static 'vowels/images/call.gif' %}" alt="" /></p> {% endcomment %}
+						</div>
+						<div id="maintext_portfolio" class="center" style="margin-top: 25px;">
+							<label for="word_count" class="settings_text">Maximum guesses : </label>
+							<select name="max_guess" id="id_max_guess" class="select-css">
+								<option value="1">One (Recommended)</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+							<div style="clear:both"></div>
+							<div class="clr"></div><!-- clear float -->
+							{% comment %} <p style="text-align:center"><img src="{% static 'vowels/images/call.gif' %}" alt="" /></p> {% endcomment %}
+						</div>
+						<button class="button_set_game" onclick="set_game(this);" style="margin-top: 25px;">Begin session</button>
+					</div>
+				</div>
+			</div>
+			<div id="game_ground" style="display: none;">
+				<div id="padding_content">
+					<div id="maincontent">
+						<div id="maintext_portfolio">
+							<div style="margin-left: 105px;">
+								<button class="button" onclick="start_over(this);">Start Over</button>
+								<button class="button" id="id_pause">Pause</button>
+								<label class="button" id="minutes" style="margin-left: 141px;background-color:lightblue;">00</label>:<label class="button" id="seconds" style="margin-left: 26px;background-color:lightblue;">00</label>
+								<label style="margin-left: 25px;font-size: 15px;" id="wor_cnt_label">Word count : <span id="id_word_counter">0/</span> </label>
+							</div>
+							<div style="width: 100%;">
+								<div style="float:left; width: 80%;">
+									<div class="container_pf">
+										<div class="box_pf">
+											<img src="{% static 'vowels/images/letters/sound.png' %}" alt="" width="90" height="48"/>
+											
+										</div>
+									</div>
+								</div>
+								<div style="float:right; margin-top: -94px; margin-right: 168px">
+									<div class="container_pf">
+										<div class="box_pf" id="main_box_a">
+											<img src="{% static 'vowels/images/letters/a.png' %}" onclick="check_ans(this);" data-value="a" alt="" width="90" height="48"/>
+											
+										</div>
+									</div>
+									<div class="container_pf">
+										<div class="box_pf" id="main_box_ᴂ">
+											<img src="{% static 'vowels/images/letters/ᴂ.png' %}" onclick="check_ans(this);" data-value="ᴂ" alt="" width="90" height="48"/>
+											
+										</div>
+									</div>
+									<div class="container_pf">
+										<div class="box_pf" id="main_box_capital_i">
+											<img src="{% static 'vowels/images/letters/capital_i.png' %}" onclick="check_ans(this);" data-value="capital_i" alt="" width="90" height="48"/>
+											
+										</div>
+									</div>
+									<div class="container_pf">
+										<div class="box_pf nomargin" id="main_box_e">
+											<img src="{% static 'vowels/images/letters/e.png' %}" onclick="check_ans(this);" data-value="e" alt="" width="90" height="48"/>
+											
+										</div>
+									</div>
+									<div class="container_pf">
+										<div class="box_pf" style="margin-left: 25px;" id="main_box_i">
+											<img src="{% static 'vowels/images/letters/i.png' %}" onclick="check_ans(this);" data-value="i" alt="" width="90" height="48"/>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="container_pf">
+											<div class="box_pf" id="main_box_i">
+												<img src="{% static 'vowels/images/letters/o.png' %}" onclick="check_ans(this);" data-value="o" alt="" width="90" height="48"/>
+												
+											</div>
+										</div>
+										<div class="container_pf">
+											<div class="box_pf">
+												<img src="{% static 'vowels/images/letters/u.png' %}" onclick="check_ans(this);" data-value="u" alt="" width="90" height="48"/>
+												
+											</div>
+										</div>
+										<div class="container_pf">
+											<div class="box_pf nomargin">
+												<img src="{% static 'vowels/images/letters/Ʊ.png' %}" onclick="check_ans(this);" data-value="Ʊ" alt="" width="90" height="48"/>
+												
+											</div>
+										</div>
+										<div class="container_pf1">
+											<!-- <div class="box_pf nomargin">
+												<a href="images/8.jpg" title="Portfolio8" rel="lightbox-gallery"><img src="{% static 'vowels/images/letters/Ʊ.png' %}" alt="" width="90" height="48"/></a>
+												
+											</div> -->
+										</div>
+										<div class="container_pf">
+											<div class="box_pf nomargin" style="margin-left: 25px;">
+												<img src="{% static 'vowels/images/letters/ᴧ.png' %}" onclick="check_ans(this);" data-value="ᴧ" alt="" width="90" height="48"/>
+												
+											</div>
+										</div>
+										<div class="container_pf">
+											<div class="box_pf nomargin" style="margin-left: 25px;">
+												<img src="{% static 'vowels/images/letters/ԑ.png' %}" onclick="check_ans(this);" data-value="ԑ" alt="" width="90" height="48"/>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style="clear:both"></div>
+						<div class="clr"></div><!-- clear float -->
+						<br /><hr /><br />
+						{% comment %} <p style="text-align:center"><img src="{% static 'vowels/images/call.gif' %}" alt="" /></p> {% endcomment %}
+						</div>
+						<button class="button_start" onclick="start_game(this);">Click here to start the game</button>
+					</div>
+				</div>
+			</div>
+			<div id="result_display" style="display: none;">
+				<div id="padding_content" style="margin-top: 125px;margin-left: 170px;">
+					<div id="maincontent">
+						<!-- <div id="maintext_portfolio"> -->
+							<div id="id_total_score" style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;"></div>
+								<!-- <div style="float:right; margin-top: -94px; margin-right: 168px"> -->
+									<div class="container_pf" id="div_mark_a" style="display: none;">
+										<div class="box_pf">
+											<img src="{% static 'vowels/images/letters/a.png' %}" alt="" width="90" height="48"/>
+											
+										</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_a">10%</div>
+									</div>
+									<div class="container_pf" id="div_mark_ᴂ" style="display: none;">
+										<div class="box_pf">
+											<img src="{% static 'vowels/images/letters/ᴂ.png' %}" alt="" width="90" height="48"/>
+											
+										</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_ᴂ">10%</div>
+									</div>
+									<div class="container_pf" id="div_mark_capital_i" style="display: none;">
+										<div class="box_pf">
+											<img src="{% static 'vowels/images/letters/capital_i.png' %}" alt="" width="90" height="48"/>
+											
+										</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_capital_i">10%</div>
+									</div>
+									<div class="container_pf" id="div_mark_e" style="display: none;">
+										<div class="box_pf nomargin">
+											<img src="{% static 'vowels/images/letters/e.png' %}" alt="" width="90" height="48"/>
+											
+										</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_e">10%</div>
+									</div>
+									<div class="container_pf" id="div_mark_i" style="display: none;">
+										<div class="box_pf" style="margin-left: 25px;">
+											<img src="{% static 'vowels/images/letters/i.png' %}" alt="" width="90" height="48"/>
+											
+										</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_i">10%</div>
+									</div>
+									<div class="row">
+										<div class="container_pf" id="div_mark_o" style="display: none;">
+											<div class="box_pf">
+												<img src="{% static 'vowels/images/letters/o.png' %}" alt="" width="90" height="48"/>
+												
+											</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_o">10%</div>
+										</div>
+										<div class="container_pf" id="div_mark_u" style="display: none;">
+											<div class="box_pf">
+												<img src="{% static 'vowels/images/letters/u.png' %}" alt="" width="90" height="48"/>
+												
+											</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_u">10%</div>
+										</div>
+										<div class="container_pf" id="div_mark_Ʊ" style="display: none;">
+											<div class="box_pf nomargin">
+												<img src="{% static 'vowels/images/letters/Ʊ.png' %}" alt="" width="90" height="48"/>
+												
+											</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_Ʊ">10%</div>
+										</div>
+										<div class="container_pf1">
+											<!-- <div class="box_pf nomargin">
+												<a href="images/8.jpg" title="Portfolio8" rel="lightbox-gallery"><img src="{% static 'vowels/images/letters/Ʊ.png' %}" alt="" width="90" height="48"/></a>
+												
+											</div> -->
+										</div>
+										<div class="container_pf" id="div_mark_ᴧ" style="display: none;">
+											<div class="box_pf nomargin" style="margin-left: 25px;">
+												<img src="{% static 'vowels/images/letters/ᴧ.png' %}" alt="" width="90" height="48"/>
+												
+											</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_ᴧ">10%</div>
+										</div>
+										<div class="container_pf" id="div_mark_ԑ" style="display: none;">
+											<div class="box_pf nomargin" style="margin-left: 25px;">
+												<img src="{% static 'vowels/images/letters/ԑ.png' %}" alt="" width="90" height="48"/>
+												
+											</div>
+										<div style="color: black;font-size: 40px;font-weight: 300;margin-left: 15px;margin-top: 10px;" id="mark_ԑ">10%</div>
+										</div>
+									<!-- </div> -->
+									</div>
+						<div class="clr"></div><!-- clear float -->
+						<br /><br />
+						{% comment %} <p style="text-align:center"><img src="{% static 'vowels/images/call.gif' %}" alt="" /></p> {% endcomment %}
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+			<div class="clr"></div>
+			</div>
+		<!-- END OF CONTENT -->
+		
+		</div>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal1">
+
+	<!-- Modal content -->
+	<div class="modal1-content">
+		<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2 style="text-align: center;">Choose your sounds</h2>
+  </div>
+  <div class="modal-body" id="modal_el">
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="a" data-id="a" src="{% static 'vowels/images/letters/a.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img  onclick="add_word(this);" id="ᴂ" data-id="ᴂ" src="{% static 'vowels/images/letters/ᴂ.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="capital_i" data-id="capital_i" src="{% static 'vowels/images/letters/capital_i.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="e" data-id="e" src="{% static 'vowels/images/letters/e.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="i" data-id="i" src="{% static 'vowels/images/letters/i.png' %}" alt="" width="90" height="48"/>
+		</div>
+	<div id="id_to_av">	
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="o" data-id="o" src="{% static 'vowels/images/letters/o.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" data-id="u" src="{% static 'vowels/images/letters/u.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="Ʊ" data-id="Ʊ" src="{% static 'vowels/images/letters/Ʊ.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="ᴧ" data-id="ᴧ" src="{% static 'vowels/images/letters/ᴧ.png' %}" alt="" width="90" height="48"/>
+		</div>
+		<div class="box_pf" style="display: inline-block;">
+			<img onclick="add_word(this);" id="ԑ" data-id="ԑ" src="{% static 'vowels/images/letters/ԑ.png' %}" alt="" width="90" height="48"/>
+		</div>
+	</div>
+</div>
+  <div class="modal-footer">
+    <button class="button_modal close1" id="save_word">Save</button>
+    <button class="button_modal close2" id="cancel_word">Close</button>
+    <button class="button_modal close2" id="select_all">Select All</button>
+  </div>
+	</div>
+
+	</div>
+</body>
+
+<script>
+	var csrfmiddlewaretoken = '{{ csrf_token }}';
+	var word_list = [];
+	var word_count = null;
+	var max_guess = null;
+	var audio_list = null;
+	var game_started = false;
+	var correct_ans = null;
+	var counter = null; 
+	var total_points = 0;
+	var temp_max_guess = 0;
+	var wrong_ans_id = null;
+	var ans_id = null;
+	var upcounter = 0;
+	var letter_list = {};
+	var total_correct_pnt = 0;
+	var wait_state = false;
+	var pause = false;
+
+	document.getElementById('select_all').addEventListener('click', function(){
+		word_list = ['ԑ', 'ᴧ', 'Ʊ', 'u', 'o', 'i', 'e', 'capital_i', 'ᴂ', 'a'];
+		var child_el = document.getElementById('modal_el').children;
+		for (var i=0; i < child_el.length; i++){
+			if(child_el[i].id == 'id_to_av'){
+				for (var q=0; q < child_el[i].children.length; q++){
+					child_el[i].children[q].style.backgroundColor = "lightblue";
+				}
+			}else{
+				child_el[i].style.backgroundColor = "lightblue";
+			}
+		}
+	});
+
+	document.getElementById('id_pause').addEventListener('click', function () {
+		if (pause){
+			document.getElementById('id_pause').innerHTML = 'Pause';
+			Clock.resume();
+			pause = false;
+		}else{
+			document.getElementById('id_pause').innerHTML = 'Resume';
+			Clock.pause();
+			pause = true;
+		}
+		mnt = Number(document.getElementById('minutes').innerHTML);
+		sec = Number(document.getElementById('seconds').innerHTML);
+		console.log(mnt, sec);
+	});
+
+	var Clock = {
+		totalSeconds: 0,
+
+		start: function () {
+			var self = this;
+
+			this.interval = setInterval(function () {
+			self.totalSeconds += 1;
+
+			// $("#hour").text(Math.floor(self.totalSeconds / 3600));
+			document.getElementById('minutes').innerHTML = Math.floor(self.totalSeconds / 60 % 60);
+			document.getElementById('seconds').innerHTML = parseInt(self.totalSeconds % 60);
+			}, 1000);
+		},
+
+		pause: function () {
+			clearInterval(this.interval);
+			delete this.interval;
+		},
+
+		resume: function () {
+			if (!this.interval) this.start();
+		}
+	};
+
+	function remove_div_play_audio(el){
+		el.parentElement.style.display = "none";
+		// el.nextSibling.style.display = "none";
+		setInterval(setTime, 1000);
+		play_audio()
+	}
+
+	function check_ans(el){
+		temp_max_guess++;
+		if(wait_state){
+			// wait_state = false;
+			// play_audio();
+		}else{ 
+					console.log(Object.keys(letter_list))
+					if(document.getElementsByClassName("box_pf_green")[0]){
+						document.getElementsByClassName("box_pf_green")[0].classList.add('box_pf')
+						document.getElementsByClassName("box_pf_green")[0].classList.remove('box_pf_green')
+					}
+					if(document.getElementsByClassName("box_pf_red")[0]){
+						document.getElementsByClassName("box_pf_red")[0].classList.add('box_pf')
+						document.getElementsByClassName("box_pf_red")[0].classList.remove('box_pf_red')
+					}
+					console.log("coreect ans", el.getAttribute('data-value'))
+					if(temp_max_guess <= Number(max_guess) && game_started && correct_ans == el.getAttribute('data-value')){
+						console.log("entered correct ans if ", el.getAttribute('data-value'))
+						el.parentElement.classList.remove("box_pf");
+						el.parentElement.classList.add("box_pf_green");
+						if(!(el.getAttribute('data-value') in letter_list)){
+							console.log(letter_list)
+							letter_list[el.getAttribute('data-value')] = [1, 1];
+						}else{
+							console.log(letter_list)
+							letter_list[el.getAttribute('data-value')][0]++;
+							letter_list[el.getAttribute('data-value')][1]++;
+						}
+						total_points += 1;
+						temp_max_guess = 0;
+						setInterval(setTime, 1000);
+						// if(counter >= 0){
+							play_audio()
+						// }
+						console.log("correct anwser")
+					}else if (game_started){
+						console.log("max_guess", max_guess, "total guess", temp_max_guess)
+						console.log("entered wrong ans if ", el.getAttribute('data-value'))
+						
+						el.parentElement.classList.remove("box_pf");
+						el.parentElement.classList.add("box_pf_red");
+						if(temp_max_guess == Number(max_guess)){
+							console.log("entered wrong ans if and max guess ", el.getAttribute('data-value'))
+							green_el = document.getElementsByClassName('box_pf_green')[0]
+							temp_max_guess = 0;
+							setInterval(setTime, 1000);
+							if(!(correct_ans in letter_list)){
+								console.log(letter_list)
+								letter_list[correct_ans] = [1, 0];
+							}else{
+								console.log(letter_list)
+								letter_list[correct_ans][0]++;
+							}
+
+							// if(counter >= 0){
+								play_audio()
+							// }
+						}else{
+							// wait_state = true;
+
+						}
+					}else{
+
+					}
+		}		
+	}
+
+	function add_word(el){
+		if(word_list.includes(el.getAttribute('data-id'))){
+			el.parentElement.style.backgroundColor = "white";
+			word_list.pop(el.getAttribute('data-id'));
+		}else{
+			el.parentElement.style.backgroundColor = "lightblue";
+			word_list.push(el.getAttribute('data-id'));
+		}
+		console.log(word_list)
+	}
+
+	function set_game(el){
+		word_count = document.getElementById('id_wors_count').value;
+		word_count = 3;
+		max_guess = document.getElementById('id_max_guess').value;
+		max_guess = 2
+		document.getElementById("game_settings").style.display = "none"; 
+		document.getElementById("game_ground").style.display = "block"; 
+		document.getElementById('id_word_counter').innerHTML =  upcounter+"/"+word_count;
+		call_ajax_fun();
+	}
+
+	function start_over(el){
+		location.reload();
+	}
+
+	var minutesLabel = document.getElementById("minutes");
+	var secondsLabel = document.getElementById("seconds");
+	var totalSeconds = 0;
+
+	function start_game(el){
+		// temp_max_guess = max_guess
+		upcounter = 1;
+		// document.getElementById('wor_cnt_label').style.display = "block";
+		counter = Number(word_count) - 1;
+		Clock.start();
+		// setInterval(setTime, 1000);
+		game_started = true;
+		el.style.display = "none";
+		play_audio()
+	}
+
+	function play_audio(){
+		// if(document.getElementsByClassName("box_pf_green")[0]){
+		// 	document.getElementsByClassName("box_pf_green")[0].classList.add('box_pf')
+		// 	document.getElementsByClassName("box_pf_green")[0].classList.remove('box_pf_green')
+		// }
+		if(counter >= 0){
+			audio = audio_list[counter][0]
+			correct_ans = audio_list[counter][1][2]
+			console.log(audio)
+			console.log("play game", correct_ans)
+			var audio = new Audio(audio);
+			audio.play();
+			document.getElementById('id_word_counter').innerHTML =  upcounter+"/"+word_count;
+			upcounter++;
+			counter--;
+		}else if(counter < 0){
+			console.log(letter_list)
+			for (var key of Object.keys(letter_list)) {
+				console.log(key + " -> " + letter_list[key])
+				div_id = 'div_mark_' +key
+				console.log(div_id, "iddddddd")
+				mark_id = 'mark_'+key
+				total_correct_pnt += letter_list[key][1]
+				mark = (letter_list[key][1]/letter_list[key][0]) * 100;
+				document.getElementById(div_id).style.display = "block";
+				document.getElementById(mark_id).innerHTML = mark + '%';
+			}
+			total_correct_pnt = Math.round((total_correct_pnt/word_count) * 100);
+			text = "Your total score is "+total_correct_pnt +"%"
+			document.getElementById('id_total_score').innerHTML = text
+			document.getElementById('game_ground').style.display = "none";
+			document.getElementById('result_display').style.display = "block";
+		}else{
+		}
+	}
+
+	function setTime() {
+		++totalSeconds;
+		secondsLabel.innerHTML = pad(totalSeconds % 60);
+		minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+	}
+
+	function pad(val) {
+		var valString = val + "";
+		if (valString.length < 2) {
+			return "0" + valString;
+		} else {
+			return valString;
+		}
+	}
+
+	function call_ajax_fun(){
+		jQuery.ajax({
+			async: 'false',
+			url: "{% url 'AjaxGetSoundFiles' %}",
+			type: 'POST',
+			data: {'word_list': word_list, 'word_count': word_count, 'csrfmiddlewaretoken': csrfmiddlewaretoken},
+			success: function(data){
+				audio_list = JSON.parse(data).response
+				audio_list = Object.entries(audio_list);
+				console.log(audio_list)
+			}
+		});
+	}
+	// Modal JS
+	// Get the modal
+	var modal = document.getElementById("myModal");
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+	var span1 = document.getElementsByClassName("close1")[0];
+	// var span2 = document.getElementsByClassName("close2")[0];
+
+	// When the user clicks on the button, open the modal
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	span1.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	// span2.onclick = function() {
+	// 	// word_list.forEach(function(item){
+	// 	// 	ele = document.getElementById(item);
+	// 	// 	ele.parentElement.style.backgroundColor = "white";
+	// 	// });
+	// 	// word_list = []
+	// 	modal.style.display = "none";
+	// }
+
+
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+	}
+	// Modal JS ends here
+</script>
+
+</html>

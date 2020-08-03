@@ -1,0 +1,639 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="" />
+  <meta name="title" content="" />
+  <meta name="description" content="" />
+<title>REGISTER</title>
+
+<!-- ////////////////////////////////// -->
+<!-- //      Start Stylesheets       // -->
+<!-- ////////////////////////////////// -->
+<link href="{% static 'vowels/css/style.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'vowels/css/inner.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'vowels/css/slimbox2.css' %}" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+    <script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+	<script>
+	  DD_belatedPNG.fix('#slideshow_container, #content, #header_inner, img, .bg_input');
+	</script>
+	<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<style type="text/css" >
+/*** PORTFOLIO ***/
+.container_pf{float:left; margin-bottom:20px; line-height:20px;}
+.container_pf1{margin-bottom:20px; line-height:20px;}
+.box_pf{
+	width:90px;
+	border: 1px solid #ddd;
+	text-align: center;
+	padding: 6px 6px 0px 6px;
+	margin: 10px 26px 4px 0px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.box_pf_green{
+	background-color: green;
+	width:90px;
+	border: 1px solid #ddd;
+	text-align: center;
+	padding: 6px 6px 0px 6px;
+	margin: 10px 26px 4px 0px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.box_pf_red{
+	background-color: red;
+	width:90px;
+	border: 1px solid #ddd;
+	text-align: center;
+	padding: 6px 6px 0px 6px;
+	margin: 10px 26px 4px 0px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.box_pf.nomargin{margin-right:0px;}
+.box_pf img{
+}
+
+.button {
+  background-color:#A0A0A0; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 25px; 
+  margin-left: 25px;
+}
+
+.button_modal {
+  background-color:rgb(248, 132, 132); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 25px; 
+  margin-top: 25px; 
+  margin-right: 45px;
+  float: right;
+}
+
+
+.mybtn {
+  background-color:lightgrey; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 25px; 
+  margin-left: 55px;
+  width: 25%;
+  height: 50px;
+}
+
+.button:hover{
+	background-color:red;
+}
+
+.button_start:hover{
+	background-color:lightgreen;
+}
+
+.button_set_game:hover{
+	background-color:lightgreen;
+}
+
+.button_start{
+	width: 623px;
+	background-color: seagreen;
+	margin-left: 132px;
+
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-bottom: 25px; 
+	/* margin-left: 25px; */
+}
+
+.button_set_game{
+	width: 330px;
+	background-color: darkgray;
+	margin-left: 400px;
+
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-bottom: 25px; 
+	/* margin-left: 25px; */
+}
+
+.select-css {
+    display: inline;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 50%;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color:rgba(211, 211, 211, 0.959);
+}
+
+.select-css:hover {
+    border-color: #888;
+}
+
+.settings_text {
+	font-family:Serif;
+	color: #242424;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.center {
+  margin-left: 140px;;
+  width: 90%;
+  padding: 10px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:lightgray; /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal1-content {
+  background-color: white;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 45%; /* Could be more or less, depending on screen size */
+  height: 40%;
+  border-radius: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Register */
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 230px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 230px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+/* Register Ends here */
+
+/*** END OF PORTFOLIO ***/
+</style>
+
+<!-- ////////////////////////////////// -->
+<!-- //      Javascript Files        // -->
+<!-- ////////////////////////////////// -->
+<script type="text/javascript" src="{% static 'vowels/js/jquery-1.3.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vowels/js/custom.js' %}"></script>
+<script type="text/javascript" src="{% static 'vowels/js/slimbox2.js' %}"></script>
+</head>
+<body>
+	<div id="main_container_inner">
+		<div id="centercolumn">
+		
+		<!-- BEGIN HEADER -->
+			<div id="toparea">
+				<div id="logo">
+					<div id="pad_logo">
+						<!-- <a href="index-2.html"><img src="{% static 'vowels/images/logo.png' %}" alt="" /></a> -->
+					</div>
+				</div><!-- end of logo -->
+				<div id="topmenu">
+					<div id="searchtop">
+						<form method="post" action="#">
+						<p><span class="bg_input"><input type="text" class="inputbox" value="search" onblur="if (this.value == ''){this.value = 'search'; }" onfocus="if (this.value == 'search') {this.value = ''; }"/></span></p>
+						</form>
+					</div><!-- end of searchtop -->
+					<div id="navtop">
+						<ul id="nav">
+						<li><a href="index-2.html">Home</a></li>
+						<li><a href="about.html">About Us</a>
+							<ul>
+								<li><a href="about.html">Sub menu Level 2a</a></li>
+								<li><a href="about.html">Sub menu Level 2b</a>
+									<ul>
+										<li><a href="about.html">Sub menu Level 3a</a></li>
+										<li><a href="about.html">Sub menu Level 3b</a></li>
+										<li><a href="about.html">Sub menu Level 3c</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">Sub menu Level 2c</a></li>
+							</ul>
+						</li>
+						<li class="current_page_item"><a href="portfolio.html">Vowel</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+						</ul>
+					</div><!-- end of navtop -->
+				</div><!-- end of topmenu -->
+				<div class="clr"></div>
+			</div><!-- end of toparea -->
+			
+			<div id="header_inner">
+				<div id="headertext">
+				<h1 id="id_reg">LOGIN</h1>
+				{% if messages %}
+                {% for message in messages %}
+                <div class="alert {% if message.tags == 'error' %} alert-danger {% else %} alert-success {% endif %} " role="alert">
+					{% if message.tags == 'error' %}
+					{{message}}
+					{% endif %}
+                </div>
+                {% endfor %}
+                {% endif %}
+				</div>
+			</div>
+		<!-- END OF HEADER -->
+			
+		<!-- BEGIN CONTENT -->
+		
+			<div id="content" class="reg" style="display: none;">
+				<form action="{% url 'Register' %}" method="POST">
+					<div class="form_style">
+						{% csrf_token %}
+						<div style="margin-top: 25px; margin-left: 330px;"><h1 style="padding-top: 50px;"></h1></div>
+					  <input type="text" placeholder="Username" name="username" id="id_username" required>
+					  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+				  
+					  <input type="password" placeholder="Enter Password" name="password" id="id_password" required>
+				  
+					  <input type="password" placeholder="Repeat Password" name="conf_password" id="id_conf_password" required>
+					  <input type="text" placeholder="Country" name="country" id="id_country" required>
+					  <input type="text" placeholder="First Language" name="language" id="id_language" required>
+
+					  <button type="submit" class="registerbtn">Register</button>
+					  <p style="margin-left: 390px;">Already have an account? <a onclick="login();">Sign in</a>.</p>
+					  <p style="margin-left: 390px;">Click <a href="{% url 'index' %}">here </a> to play as a guest.</p>
+					  
+					  <hr>
+
+					</div>
+				  
+					<!-- <div class="container signin"> -->
+					<!-- </div> -->
+				</form>
+			</div>
+			<div id="content" class="log">
+				<form action="{% url 'Login' %}" method="POST">
+					<div class="form_style">
+						{% csrf_token %}
+					<div style="margin-top: 25px; margin-left: 330px;"><h1 style="padding-top: 50px;"></h1></div>
+					  <input type="text" placeholder="Username" name="username" id="id_username" required>
+				  
+					  <input type="password" placeholder="Enter Password" name="password" id="id_password1" required>
+				  
+
+					  <button type="submit" class="registerbtn">Login</button>
+					  <p style="margin-left: 390px;">If you dont have an account?  <a onclick="register();">Register here</a>.</p>
+					  <p style="margin-left: 390px;">Click <a href="{% url 'index' %}">here </a> to play as a guest.</p>
+					  <hr>
+
+					</div>
+				  
+					<!-- <div class="container signin"> -->
+					<!-- </div> -->
+				</form>
+			</div>
+	</div>
+
+
+</body>
+
+<script>
+	var csrfmiddlewaretoken = '{{ csrf_token }}';
+	var word_list = [];
+	var word_count = null;
+	var max_guess = null;
+	var audio_list = null;
+	var game_started = false;
+	var correct_ans = null;
+	var counter = null; 
+	var total_points = 0;
+	var temp_max_guess = 0;
+	var wrong_ans_id = null;
+	var ans_id = null;
+
+	function login(){
+		document.getElementById("id_reg").innerHTML = 'LOGIN';
+		document.getElementsByClassName('reg')[0].style.display = "none";
+		document.getElementsByClassName('log')[0].style.display = "block";
+	}
+
+	function register(){
+		document.getElementById("id_reg").innerHTML = 'REGISTER';
+		document.getElementsByClassName('log')[0].style.display = "none";
+		document.getElementsByClassName('reg')[0].style.display = "block";
+	}
+
+	function remove_div_play_audio(el){
+		alert("new function")
+		el.parentElement.style.display = "none";
+		// el.nextSibling.style.display = "none";
+		setInterval(setTime, 1000);
+		play_audio()
+	}
+
+	function check_ans(el){
+		if (wrong_ans_id != null){
+			document.getElementById(wrong_ans_id).style.display = "none"; 
+		}
+		ans_id = 'green_'+correct_ans
+		wrong_ans_id = "red_"+el.getAttribute('data-value')
+		if(temp_max_guess <= Number(max_guess) && game_started && correct_ans == el.getAttribute('data-value')){
+			alert("correct answer");
+			document.getElementById(ans_id).style.display = "block"; 
+			total_points += 1;
+			setInterval(setTime, 1000);
+			// if(counter >= 0){
+				// play_audio()
+			// }
+		}else if(game_started){
+			alert("wrong answer");
+			temp_max_guess++;
+			console.log(temp_max_guess)
+			if(temp_max_guess > Number(max_guess)){
+				// document.getElementById(wrong_ans_id).style.display = "block"; 
+				document.getElementById(ans_id).style.display = "block";
+				alert("max guess exceed") 
+				temp_max_guess = 0;
+				setInterval(setTime, 1000);
+				// if(counter >= 0){
+					// play_audio()
+				// }
+			}
+		}else{
+			alert("here")
+		}
+	}
+
+	function add_word(el){
+		if(word_list.includes(el.getAttribute('data-id'))){
+			el.parentElement.style.backgroundColor = "white";
+			word_list.pop(el.getAttribute('data-id'));
+		}else{
+			el.parentElement.style.backgroundColor = "lightblue";
+			word_list.push(el.getAttribute('data-id'));
+		}
+	}
+
+	function set_game(el){
+		word_count = document.getElementById('id_wors_count').value;
+		word_count = 2;
+		max_guess = document.getElementById('id_max_guess').value;
+		document.getElementById("game_settings").style.display = "none"; 
+		document.getElementById("game_ground").style.display = "block"; 
+		call_ajax_fun();
+	}
+
+	function start_over(el){
+		location.reload();
+		console.log(word_list)
+		// alert("start over")
+		// // word_list.forEach(function(item){
+		// // 	alert(item)
+		// // 	alert("dsfs")
+		// // 	document.getElementById(item).style.backgroundColor = "white";
+		// // 	word_list.pop(item);
+		// // });
+		// for (item=0; item< word_list.length; item++){
+		// 	alert(item)
+		// 	alert("dsfs")
+		// 	document.getElementById(word_list[item]).style.backgroundColor = "white";
+		// 	word_list.pop(word_list[item]);
+		// }
+		// alert("after loop")
+		// word_count = null;
+		// max_guess = null;
+		// word_list = [];
+		// document.getElementById('id_wors_count').value='20'
+		// document.getElementById('id_max_guess').value='1'
+		// var x = document.getElementById("game_ground").style.display = "none"; 
+		// document.getElementById("game_settings").style.display = "block"; 
+	}
+
+	var minutesLabel = document.getElementById("minutes");
+	var secondsLabel = document.getElementById("seconds");
+	var totalSeconds = 0;
+
+	function start_game(el){
+		counter = Number(word_count) - 1;
+		setInterval(setTime, 1000);
+		game_started = true;
+		el.style.display = "none";
+		play_audio()
+	}
+
+	function play_audio(){
+		if(counter >= 0){
+			alert("pay audio")
+			audio = audio_list[counter][0]
+			correct_ans = audio_list[counter][1][2]
+			alert("correct_ans")
+			alert(correct_ans)
+			console.log(audio)
+			var audio = new Audio(audio);
+			audio.play();
+			counter--;
+		}else if(counter < 0){
+			alert("GAME OVER")
+			console.log("total_points", total_points)
+		}else{
+			alert("elaee")
+		}
+	}
+
+	function setTime() {
+		++totalSeconds;
+		secondsLabel.innerHTML = pad(totalSeconds % 60);
+		minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+	}
+
+	function pad(val) {
+		var valString = val + "";
+		if (valString.length < 2) {
+			return "0" + valString;
+		} else {
+			return valString;
+		}
+	}
+
+	function call_ajax_fun(){
+		jQuery.ajax({
+			async: 'false',
+			url: "{% url 'AjaxGetSoundFiles' %}",
+			type: 'POST',
+			data: {'word_list': word_list, 'word_count': word_count, 'csrfmiddlewaretoken': csrfmiddlewaretoken},
+			success: function(data){
+				audio_list = JSON.parse(data).response
+				audio_list = Object.entries(audio_list);
+				console.log(audio_list)
+			}
+		});
+	}
+	// Modal JS
+	// Get the modal
+	var modal = document.getElementById("myModal");
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+	var span1 = document.getElementsByClassName("close1")[0];
+	// var span2 = document.getElementsByClassName("close2")[0];
+
+	// When the user clicks on the button, open the modal
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	span1.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	// span2.onclick = function() {
+	// 	// word_list.forEach(function(item){
+	// 	// 	ele = document.getElementById(item);
+	// 	// 	ele.parentElement.style.backgroundColor = "white";
+	// 	// });
+	// 	// word_list = []
+	// 	modal.style.display = "none";
+	// }
+
+
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+	}
+	// Modal JS ends here
+</script>
+
+</html>
